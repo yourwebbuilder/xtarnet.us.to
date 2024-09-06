@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Fullscreen Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #message {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="message"><!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Auto Fullscreen Example</title>
+            <style>
+                body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    margin: 0;
+                    font-family: Arial, sans-serif;
+                    background-color: #f0f0f0;
+                }
+        
+                #message {
+                    font-size: 18px;
+                    color: #333;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="message">
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Responsive Video Thumbnails</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+   
+
+ 
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <a href="#" class="sidebar-item">
+                <i class="fas fa-home"></i>
+                <span class="text">Home</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i class="fas fa-compass"></i>
+                <span class="text">Explore</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i class="fas fa-bell"></i>
+                <span class="text">Notifications</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i class="fas fa-envelope"></i>
+                <span class="text">Messages</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="category-bar">
+       
+
+
+        <button class="category-btn" onclick="filterCategory('all')">Monu Kumar Sharma</button>
+        <button class="category-btn" onclick="filterCategory('all')">All</button>
+        <button class="category-btn" onclick="filterCategory('hd')">Music</button>
+        <button class="category-btn" onclick="filterCategory('bd')">Gaming</button>
+        <button class="category-btn" onclick="filterCategory('cr')">News</button>
+        <button class="category-btn" onclick="filterCategory('hr')">Sports</button>
+        <button class="category-btn" onclick="filterCategory('hr')">Education</button>
+        <button class="category-btn" onclick="filterCategory('hr')">Entertainment</button>
+        <button class="category-btn" onclick="filterCategory('hr')">Travel</button>
+        <!-- Add more category buttons as needed -->
+    </div>
+    <script>
+        // Your existing script.js content
+
+        function filterCategory(category) {
+            var thumbnails = document.querySelectorAll('.video-thumbnail');
+
+            thumbnails.forEach(function(thumbnail) {
+                if (category === 'all' || thumbnail.dataset.category === category) {
+                    thumbnail.style.display = 'block';
+                } else {
+                    thumbnail.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+            <img src="whitemode.png" alt="Website Logo" class="website-logo">
+            <img src="darkmode.png" alt="Website Logo" class="website-logo">
+        </div>
+        <div class="top-bar-center">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="  Search...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <style>
+            /* Define the styles for the search icon */
+
+        </style>
+        <script>
+            // Toggle search bar visibility on mobile
+
+
+        </script>
+        <div class="top-bar-right">
+          
+            <i class="fas fa-search"  onclick="toggleContent()"></i>
+        </div>
+    </div>
+
+
+    
+    <div class="thumbnails-container">
+
+        <div class="video-thumbnail" data-category="hd" content="1">
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" 
+                 alt="Video Thumbnail" 
+                 class="thumbnail" 
+                 data-url="play5.html" 
+                 id="unfoldBtn" 
+                 onclick="minimizeSidebar()">
+            
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>
+ 
+        
+
+
+
+
+
+
+
+
+<script>
+
+
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>        
+      
+        
+
+ <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>          <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>        
+      
+        
+
+ <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>          <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>        
+      
+        
+
+ <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>          <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>        
+      
+        
+
+ <div class="video-thumbnail" data-category="hd" >
+            <div class="thumbnail-overlay">
+                <span class="duration">10:35</span>
+            </div>
+            <img src="HD-wallpaper-loki-season-2-coming-loki-season-2-loki-tv-shows-superheroes-artist-artwork-digital-art-tom-hiddleston.jpg" alt="Video Thumbnail" class="thumbnail" data-url="play5.html" id="unfoldBtn" onclick="minimizeSidebar()">
+
+            <div class="info">
+                <img src="XtarNet..gif" alt="Channel Icon" class="channel-icon">
+                <div class="details">
+                    <span class="title">Sample Video Title</span>
+                    <span class="channel-name">Channel Name</span>
+                    <span class="views">1M views</span>
+                </div>
+            </div>
+            <div class="options-btn" onclick="toggleOptions(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                </svg>
+            </div>
+            
+            
+            <div class="options-menu">
+                <ul>
+                    <li><a href="#">Watch Later</a></li>
+                    <li><a href="#">Copy Link</a></li>
+                </ul>
+            </div>
+        </div>        
+
+
+
+
+
+
+
+
+
+
+          
+    </div>    
+    
+
+    
+
+
+
+    
+    <script>
+// Minimize the sidebar
+function minimizeSidebar() {
+    document.querySelector('.sidebar').classList.add('collapsed');
+}
+
+// Maximize the sidebar
+function maximizeSidebar() {
+    document.querySelector('.sidebar').classList.remove('collapsed');
+}
+
+// Toggle the sidebar between minimize and maximize
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('collapsed');
+}
+
+// Add event listeners for the buttons
+document.getElementById('minimizeSidebarBtn').addEventListener('click', minimizeSidebar);
+document.getElementById('maximizeSidebarBtn').addEventListener('click', maximizeSidebar);
+document.getElementById('toggleSidebarBtn').addEventListener('click', toggleSidebar);
+
+function toggleOptions(button) {
+    var optionsMenu = button.nextElementSibling;
+    var allMenus = document.querySelectorAll('.options-menu');
+
+    // Close all other open menus except the clicked one
+    allMenus.forEach(menu => {
+        if (menu !== optionsMenu) {
+            menu.classList.remove('active');
+        }
+    });
+
+    // Toggle the selected menu
+    optionsMenu.classList.toggle('active');
+}
+
+// Add event listeners to close the menu on option click
+document.querySelectorAll('.options-menu li a').forEach(option => {
+    option.addEventListener('click', function() {
+        var optionsMenu = option.closest('.options-menu');
+        optionsMenu.classList.remove('active');
+    });
+});
+
+
+    </script>
+   
+   <div class="sidebar1">
+    <div class="sidebar-content1">
+        <a href="#" class="sidebar-item1">
+            <i class="fas fa-home"></i>
+            <span class="text1">Home</span>
+        </a>
+        <a href="#" class="sidebar-item1">
+            <i class="fas fa-search"></i>
+            <span class="text1">Search</span>
+        </a>
+        <a href="#" class="sidebar-item1">
+            <i class="fas fa-bell"></i>
+            <span class="text1">Notifications</span>
+        </a>
+        <a href="#" class="sidebar-item1">
+            <i class="fas fa-user"></i>
+            <span class="text1">Profile</span>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="foldablePage" class="foldable-page folded">
+    <div class="content">
+        <h1>Welcome to the video player</h1>
+        
+    </div>
+    <button id="foldBtn" onclick="maximizeSidebar()"   class="fold-btn">Minimize</button>
+    <button id="unfoldBtn" class="unfold-btn">Maximize</button>
+</div>
+ <style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.foldable-page {
+    position: fixed;
+    top: 0;
+   
+   bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensures it is above all other elements */
+    
+    transform: translateY(100%); /* Initially folded out of view */
+}
+
+.foldable-page .content {
+    color: white;
+    text-align: center;
+    z-index: 10000; /* Ensure content is above the background */
+}
+
+.foldable-page .fold-btn, 
+.foldable-page .unfold-btn {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10001; /* Ensure buttons are clickable */
+}
+
+.foldable-page .fold-btn {
+    left: 20px;
+    display: none; /* Initially hidden */
+}
+
+.foldable-page .unfold-btn {
+    right: 20px;
+}
+
+.foldable-page.folded {
+    transform: translateY(100%);
+}
+
+.foldable-page.unfolded {
+    transform: translateY(0);
+}
+
+body.folded {
+    overflow: hidden;
+}
+
+ </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const foldablePage = document.getElementById('foldablePage');
+    const foldBtn = document.getElementById('foldBtn');
+    const unfoldBtn = document.getElementById('unfoldBtn');
+    const thumbnails = document.querySelectorAll('.video-thumbnail img');
+
+    // Set initial states
+    foldBtn.style.display = 'none';
+
+    // Function to fold the page
+    foldBtn.addEventListener('click', () => {
+        foldablePage.classList.remove('unfolded');
+        foldablePage.classList.add('folded');
+        foldBtn.style.display = 'none';
+        unfoldBtn.style.display = 'block';
+    });
+
+    // Function to unfold the page
+    unfoldBtn.addEventListener('click', () => {
+        foldablePage.classList.remove('folded');
+        foldablePage.classList.add('unfolded');
+        foldBtn.style.display = 'block';
+        unfoldBtn.style.display = 'none';
+    });
+
+    // Add event listener to video thumbnails
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            // Unfold the page when any thumbnail is clicked
+            foldablePage.classList.remove('folded');
+            foldablePage.classList.add('unfolded');
+            foldBtn.style.display = 'block';
+            unfoldBtn.style.display = 'none';
+
+            // Optionally, minimize the sidebar when a thumbnail is clicked
+            minimizeSidebar();
+        });
+    });
+});
+
+function minimizeSidebar() {
+    document.querySelector('.sidebar').classList.add('collapsed');
+}
+
+</script>
+</body>
+
+</html>
+
+                </div>
+        
+           
+      
+       
+        </div>
+
+    <script>
+        function requestFullscreen() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.warn(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+            } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE11
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+
+        // Attempt to enter fullscreen on page load
+        window.onload = () => {
+            requestFullscreen();
+        };
+
+        // Alternative: Ask user to click if fullscreen is blocked by the browser
+        document.body.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                requestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>

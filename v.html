@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Thumbnails</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 200px;
+            height: 120px;
+        }
+
+        .thumbnail-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .video-player {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            z-index: 1000;
+        }
+
+        .video-player video {
+            width: 80%;
+            height: 80%;
+            background: black;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-gallery">
+        <!-- Video Thumbnail 1 -->
+        <div class="video-thumbnail">
+            <img src="thumbnail1.jpg" alt="Video 1" class="thumbnail-image">
+            <button class="play-button" onclick="playVideo('https://video-downloads.googleusercontent.com/ADGPM2nI1YWyavR8Muo3NJ1tEL8rbVGuQ1dVWO1oBt6wTF8nluYgmbsGTu9sYor9whzKl98WgKcZXKK7ATq9Jr30HEAmgsTBh5_9XHveXMn07pumHTQliLWN2VZogIO1ME9Puk0iXiHJBeQdTOAAdJ7SG51w7_SjpC72z7QWSWnj1acIHt1Ny458Bn1dQdLfkObWHA3K2Tj7BDvVswvRFfzAC1v9-YnLwVhtwm_VGp9O2EAJy3z3TMngtQY30IVgztGtFff7giqDBx5eWu-57zxJO_kWUbdYSSekc8gda1kOuF9uZw0yxayjfwYyDxpARVFLzyHjBvMKxqgt2ucfvNdUSR5tgXMnAW8evgpUykN6C85VqUla3vukeytcR5kYo9KoM5jenm-jlyyPF41U61_-yfd9wscq9y-xk4tL4uDrtxdU4Rc8Lix_uHaCgW1jK8XNNFu6YsEyRvBq05zKOcC9ZjCPXD7NZPDKMOLDdqMpDD4Y_xnBI49vbsqB6L4fgttFKzfvSMlnTmAo2DekS5uDVgMcRXM86WJ55Atm0aWyuU4iR_rwsDPQ35YV5j-bZrCD94WwDGj5pLZkt0Ml_0fIEYHqV60ALkfC4HXUpPEA_iQ47Js6gGPwbsWHZ-ukl9CC6Ox0Rh2gTRUm9oQS-S7OpSTi1kooCFET61pevwIc6B1dchr0bZP9ShNLCY7kV7mWjdaoMWoyjQTwIfxA0oK516Ldy5-X8Eo-si2ar0mpRvncahBXUaPTUvXyCVH0QgmRIwHbK0upuytiuqG5-9mhEK7TU3SdN4nKxS-5_SrlFABc8dTrz6kATI1fBozboKVjD8x8u0jYmSwS1xwhZb7Ukpzt2tME_FXetBR3LCKttLMMCyrEAw-ZsOCC_86cvfqVD5Mxu0LHnmGHHhzpSbV0bhgYCAeBOGz_2xDO7edNI8JtdQqhGu09diPpMY2ZHJy7dRi-Oy8CeaOi6HcubiEOWJCOjrCYVTnNvg38XzIuP23XCzOTu46PgInA60Kmfxq_3zKriQECx_LMhButdc32nReAT-yryvtZE7HTEpBJwx9PQL9FKzqDJg7vu_16bAH7VooP0lKt')">Play</button>
+        </div>
+        <!-- Video Thumbnail 2 -->
+        <div class="video-thumbnail">
+            <img src="thumbnail2.jpg" alt="Video 2" class="thumbnail-image">
+            <button class="play-button" onclick="playVideo('https://vg2bh2nj2m.indiworlds.com:183/d/5aig4ggt7db4joaxu4aub5hqzugxcnrdp3c4r7aq3fdkg4bb3lg4z4oxoz7ghfl67zkz6qdl/www.10xflix.com%20St@ee%202%20(2024)%20H3ndi%20Fu11%20M@vie%20%20720p%20.CAMRip.mkv')">Play</button>
+        </div>
+        <!-- Add more thumbnails as needed -->
+    </div>
+
+    <!-- Video player overlay -->
+    <div id="video-player" class="video-player">
+        <button class="close-button" onclick="closeVideo()">X</button>
+        <video id="video-element" controls muted></video> <!-- Muted added -->
+    </div>
+
+    <script>
+        function playVideo(videoSrc) {
+            const videoPlayer = document.getElementById('video-player');
+            const videoElement = document.getElementById('video-element');
+            
+            console.log("Playing video:", videoSrc); // Debugging line
+            videoElement.src = videoSrc;
+            videoElement.load();  // Ensure the video is loaded before playing
+            videoPlayer.style.display = 'flex';
+            videoElement.play().catch(error => {
+                console.error("Autoplay was prevented:", error);
+                alert("Autoplay was prevented. Please click the Play button.");
+            });
+        }
+
+        function closeVideo() {
+            const videoPlayer = document.getElementById('video-player');
+            const videoElement = document.getElementById('video-element');
+            
+            videoElement.pause();
+            videoElement.src = '';
+            videoPlayer.style.display = 'none';
+        }
+
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Check if URL contains a video parameter and play the video directly
+        function checkForAutoplay() {
+            const videoParam = getUrlParameter('playvideo');
+            console.log("URL parameter found:", videoParam); // Debugging line
+
+            if (videoParam) {
+                playVideo(videoParam + '.mp4');
+            }
+        }
+
+        // Run the autoplay check on page load
+        window.onload = checkForAutoplay;
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe without CSS</title>
+</head>
+<body>
+    <h1>Embedding a Website Without CSS</h1>
+
+    <iframe id="myIframe" src="https://xn.uk.to" width="100%" height="500px"></iframe>
+
+    <script>
+        // This script attempts to disable CSS in the iframe.
+        document.getElementById('myIframe').onload = function() {
+            var iframe = document.getElementById('myIframe').contentWindow.document;
+
+            // Remove all <link> tags (external CSS)
+            var links = iframe.querySelectorAll('link[rel="stylesheet"]');
+            links.forEach(link => link.parentNode.removeChild(link));
+
+            // Remove all <style> tags (internal CSS)
+            var styles = iframe.querySelectorAll('style');
+            styles.forEach(style => style.parentNode.removeChild(style));
+        };
+    </script>
+</body>
+</html>
